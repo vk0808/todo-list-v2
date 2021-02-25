@@ -18,6 +18,13 @@ export default function App() {
     <section className="section-center">
       <form className="list-form" onSubmit={handleSubmit}>
         {alert.show && <Alert />}
+        <h3>Todo List</h3>
+        <div className="form-control">
+          <input type="text" className="list" placeholder="buy ..." />
+          <button type="submit" className="submit-btn">
+            {isEditing ? 'edit' : 'submit'}
+          </button>
+        </div>
       </form>
       <div className="list-container">
         <List />
