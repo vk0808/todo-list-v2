@@ -11,7 +11,15 @@ export default function App() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('hello');
+    if (!name) {
+      
+    } else if (name && isEditing) {
+
+    } else {
+      const newItem = {id: new Date().getTime().toString(), title:name};
+      setList([...list, newItem]);
+      setName('');
+    }
   }
   
   return (
@@ -20,14 +28,14 @@ export default function App() {
         {alert.show && <Alert />}
         <h3>Todo List</h3>
         <div className="form-control">
-          <input type="text" className="list" placeholder="buy ..." />
+          <input type="text" className="list" placeholder="buy ..." value={name} onChange={(e) => {setName(e.target.value)}} />
           <button type="submit" className="submit-btn">
             {isEditing ? 'edit' : 'submit'}
           </button>
         </div>
       </form>
       <div className="list-container">
-        <List />
+        <List items={list} />
         <button className="clear-btn">clear items</button>
       </div>
     </section>
