@@ -34,10 +34,12 @@ export default function App() {
           </button>
         </div>
       </form>
-      <div className="list-container">
-        <List items={list} />
-        <button className="clear-btn">clear items</button>
-      </div>
+      {list.length > 0 && (
+        <div className="list-container">
+          <List items={list} />
+          <button className="clear-btn">clear items</button>
+        </div>
+      )}
     </section>
   );
 }
