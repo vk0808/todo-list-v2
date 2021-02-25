@@ -16,7 +16,9 @@ export default function App() {
   
   return (
     <section className="section-center">
-<form className="list-form" onSubmit={handleSubmit}></form>
+      <form className="list-form" onSubmit={handleSubmit}>
+        {alert.show && <Alert />}
+      </form>
       <div className="list-container">
         <List />
         <button className="clear-btn">clear items</button>
