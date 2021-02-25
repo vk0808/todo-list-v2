@@ -49,7 +49,7 @@ export default function App() {
   };
 
   const clearList = () => {
-    showAlert(true, "danger", "empty list");
+    showAlert(true, "danger", "emptied list");
     setList([]);
   };
 
