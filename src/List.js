@@ -1,20 +1,25 @@
-import React from 'react';
+import React from "react";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
-const List = ({items}) => {
+const List = ({ items }) => {
   return (
     <div className="list-todo">
-      {items.map(item => {
-        const {id, title} = item;
-        return {
+      {items.map((item) => {
+        const { id, title } = item;
+        return (
           <article key={id} className="list-item">
             <p className="title">{title}</p>
-            <button type="button" className="edit-btn"></button>
-            <button type="button" className="delete-btn"></button>
+            <button type="button" className="edit-btn">
+              <FaEdit />
+            </button>
+            <button type="button" className="delete-btn">
+              <FaTrash />
+            </button>
           </article>
-        }
+        );
       })}
     </div>
   );
-}
+};
 
 export default List;
