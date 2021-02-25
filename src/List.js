@@ -1,8 +1,19 @@
 import React from 'react';
 
-const List = () => {
+const List = ({items}) => {
   return (
-    <h1>Hello</h1>
+    <div className="list-todo">
+      {items.map(item => {
+        const {id, title} = item;
+        return {
+          <article key={id} className="list-item">
+            <p className="title">{title}</p>
+            <button type="button" className="edit-btn"></button>
+            <button type="button" className="delete-btn"></button>
+          </article>
+        }
+      })}
+    </div>
   );
 }
 
