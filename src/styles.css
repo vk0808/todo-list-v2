@@ -186,13 +186,11 @@ Todo List
 }
 .alert-danger {
   color: var(--clr-white);
-  padding: 0.5rem 0;
   background: #ed6a5a;
 }
 .alert-success {
   color: var(--clr-black);
   background: #66dcc2;
-  padding: 0.5rem 0;
 }
 .list-form h3 {
   color: var(--clr-white);
