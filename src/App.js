@@ -4,13 +4,13 @@ import Alert from "./Alert";
 import "./styles.css";
 
 const getLocalStorage = () => {
-  let list = localStorage.getItem('list');
+  let list = localStorage.getItem("list");
   if (list) {
-    return JSON.parse(localStorage.getItem('list'));
+    return JSON.parse(localStorage.getItem("list"));
   } else {
     return [];
   }
-}
+};
 
 export default function App() {
   const [name, setName] = useState("");
@@ -66,8 +66,8 @@ export default function App() {
   };
 
   useEffect(() => {
-    localStorage.setItem('list', JSON.stringify(list));
-  }, [list])
+    localStorage.setItem("list", JSON.stringify(list));
+  }, [list]);
 
   return (
     <section className="section-center">
@@ -78,14 +78,14 @@ export default function App() {
           <input
             type="text"
             className="list"
-            placeholder="buy ..."
+            placeholder="need to.."
             value={name}
             onChange={(e) => {
               setName(e.target.value);
             }}
           />
           <button type="submit" className="submit-btn">
-            {isEditing ? "edit" : "submit"}
+            {isEditing ? "edit" : "add"}
           </button>
         </div>
       </form>

@@ -1,9 +1,4 @@
-/*
-=============== 
-Variables
-===============
-*/
-
+/* Variables */
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
@@ -44,12 +39,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
-/*
-=============== 
-Global Styles
-===============
-*/
-
+/* Global Styles */
 *,
 ::after,
 ::before {
@@ -158,11 +148,7 @@ main {
   display: grid;
   place-items: center;
 }
-/*
-=============== 
-Todo List
-===============
-*/
+/* Todo List */
 .section-center {
   background: var(--clr-grey-1);
   border-radius: var(--radius);
@@ -236,11 +222,9 @@ Todo List
 .submit-btn:hover {
   color: var(--clr-white);
 }
-
 .list-container {
   margin-top: 2rem;
 }
-
 .list-item {
   display: flex;
   align-items: center;
@@ -287,14 +271,14 @@ Todo List
 }
 .clear-btn {
   text-transform: capitalize;
-  width: 10rem;
-  height: 1.5rem;
+  width: 80%;
+  padding: 0.5rem;
   display: grid;
   align-items: center;
   background: transparent;
-  border-color: transparent;
-  color: var(--clr-red-light);
-  margin: 0 auto;
+  border: 2px solid var(--clr-red-light);
+  color: var(--clr-white);
+  margin: 0.5rem auto;
   font-size: 0.85rem;
   letter-spacing: var(--spacing);
   cursor: pointer;
@@ -302,5 +286,5 @@ Todo List
   margin-top: 1.25rem;
 }
 .clear-btn:hover {
-  color: var(--clr-red-dark);
+  background: var(--clr-red-light);
 }
